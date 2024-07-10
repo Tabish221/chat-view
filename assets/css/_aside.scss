@@ -1,0 +1,140 @@
+.dino-aside {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 100vh;
+    max-height: 100%;
+    border: 1px solid #eee;
+    background: #f6f6f6;
+    backdrop-filter: blur(2px);
+}
+
+.aside-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    height: 60px;
+    width: 100%;
+
+    .aside-userProfil {
+        flex: 0 0 24px;
+        width: 24px;
+        height: 24px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 6px;
+        }
+    }
+
+    .aside-userName {
+        max-width: calc(100% - (20px + 24px + 26px));
+
+        h6 {
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+            text-wrap: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .aside-action {
+        width: 26px;
+        height: 26px;
+        flex: 0 0 26px;
+        span {
+            padding: 2px 3px;
+            border-radius: 2px;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+}
+
+.aside-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px 0 0px;
+    position: relative;
+    height: calc(100vh - 61px);
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 7px, black 7px);
+    mask-size: 100% 20000px;
+    mask-position: left bottom;
+    -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 7px, black 7px);
+    -webkit-mask-size: 100% 20000px;
+    -webkit-mask-position: left bottom;
+    transition: mask-position 0.4s, -webkit-mask-position 0.4s;
+
+    &:hover {
+        -webkit-mask-position: left top;
+    }
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    .aside-link {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .aside-navItmes {
+        span {
+            width: 100%;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 15px;
+            width: 100%;
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: normal;
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                flex: 0 0 20px;
+
+                svg {
+                    width: 20px;
+                    height: auto;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+}

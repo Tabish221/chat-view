@@ -1,0 +1,364 @@
+/*Main Css */
+::selection{background:#ccc;color:#fff;text-shadow:none;}
+::-webkit-scrollbar{width:8px;height: 8px;background-color:#e9e9e9;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment{display:none;}
+::-webkit-scrollbar-track-piece{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0);background-color:transparent;}
+::-webkit-scrollbar-thumb:vertical{border-radius:50px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0);background-color:rgba(167, 167, 167, 0.9)}
+::-webkit-scrollbar-thumb:horizontal{background: #ccc;width: 3px;border-radius: 0px;}
+
+html {
+    font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+body{font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;overflow-x:hidden;font-size:16px;line-height:1;color:#000000;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{display:block;font-weight:normal;}
+*:hover,
+*:focus,
+*{outline:none!important;}
+img{max-width:100%;height:auto;}
+a,
+input[type="submit"]{text-decoration: none;-webkit-transition:all 0.4s ease-In-out;-moz-transition:all 0.4s ease-In-out;-o-transition:all 0.4s ease-In-out;transition:all 0.4s ease-In-out;display:inline-block;cursor:pointer;}
+a:hover{color:#e00000;}
+p,
+a{font-size:16px;font-weight:normal;color:#000000;}
+p{line-height:26px;display:block;}
+span{display:inline-block;}
+
+textarea, 
+select,
+input[type],
+textarea,
+select,
+button{background:transparent;border:none;border-radius:0px;font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;font-weight:400;}
+::-webkit-input-placeholder{color:#999999;font-weight:400;}
+::-moz-placeholder{color:#999999;font-weight:400;}
+:-ms-input-placeholder{color:#999999;font-weight:400;}
+:-moz-placeholder{color:#999999;font-weight:400;}
+
+.login-body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    overflow: hidden;
+	overflow-y: auto;
+	mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 7px, black 7px);
+    mask-size: 100% 20000px;
+    mask-position: left bottom;
+    -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 7px, black 7px);
+    -webkit-mask-size: 100% 20000px;
+    -webkit-mask-position: left bottom;
+    transition: mask-position 0.4s, -webkit-mask-position 0.4s;
+
+    &:hover {
+        -webkit-mask-position: left top;
+    }
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+}
+
+header {
+    height: 50px;
+}
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 11px 0;
+}
+
+.login-headerAction {
+    transition: all 0.4s ease-in-out;
+    padding: 6px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+.login-headerAction:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+
+footer {
+    border-top: 1px solid #EEE;
+    background: #F8F8F8;
+    padding:  16.5px 0;
+    height: 50px;
+}
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-main p {
+    color: #666;
+    font-family: "SF Pro Text";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer-main a {
+    color: #666;
+    font-family: "SF Pro Text";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-main a:hover {
+    color: #999;
+}
+
+.footer-main span {
+    color: #999;
+    font-family: "SF Pro Text";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footerNav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* MAIN BODY */
+.login-main {
+    // height: calc(100vh - (50px + 50px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.10);
+    width: 685px;
+    max-width: 100%;
+    height: fit-content;
+    margin: auto;
+    padding: 118px 92px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h6 {
+        color: #000;
+        text-align: center;
+        font-family: "SF Pro Text";
+        font-size: 34px;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .login-forgotBtn {
+        color: #999;
+        font-family: "SF Pro Text";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration-line: underline;
+        transition: all 0.4s ease-in-out;
+    
+        &:hover {
+            color: #333;
+        }
+    }
+    
+    
+    .login-formFeild {
+        position: relative;
+    
+        .icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            bottom: 0;
+            right: 20px;
+            margin: auto;
+            overflow: hidden;
+    
+            &>* {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+    
+    
+            button {
+                padding: 2px 3px;
+                transition: all 0.4s ease-in-out;
+                border-radius: 2px;
+                animation: dblock 0s forwards;
+                
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.12);
+                }
+            }
+    
+            .loadInput {
+                animation: dnone 0s forwards;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                vertical-align: middle;
+                svg {
+                    animation: loader 1.5s infinite linear;
+                    transform-origin: center;
+                }
+            }
+            
+            .checkInput {
+                animation: dnone 0s forwards;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                vertical-align: middle;
+            }
+        } 
+    
+        input {
+            border-radius: 20px;
+            padding: 20px 60px 20px 30px;
+            border: 1px solid #DDD;
+            width: 100%;
+        }
+    
+        &+.login-formFeild {
+            display: none;
+            input {
+                border-radius: 0 0 20px 20px;
+            }
+        }
+    
+        &.itsCheck {
+            .icon {
+                button {
+                    animation: dnone 0s forwards;
+                }
+    
+                .loadInput {
+                    animation: dblock 0s 1 forwards;
+                }
+                
+                .checkInput {
+                    animation: dnone 0s forwards;
+                }
+            }
+    
+            &+.login-formFeild {
+                display: none;
+            }
+    
+            input {
+                border-radius: 20px;
+            }
+    
+        }
+        
+        &.itsDone {
+            .icon {
+                button {
+                    animation: dnone 0s forwards;
+                }
+    
+                .loadInput {
+                    animation: dnone 0s forwards;
+                }
+                
+                .checkInput {
+                    animation: dblock 0s forwards;
+                }
+            }
+    
+            input {
+                border-radius: 20px 20px 0 0;
+            }
+    
+            &+.login-formFeild {
+                display: block;
+    
+                input {
+                    border-radius: 0 0 20px 20px;
+                    border-top: none;
+                }
+            }
+        }
+        
+        
+    
+    }
+    
+    .login-error {
+        background: #FFE0E0;
+        color: #C94634;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #C94634;
+        display: none;
+    }
+}
+
+
+
+@keyframes dnone {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        display: none;
+    }
+}
+
+@keyframes dblock {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        display: block;
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+        
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

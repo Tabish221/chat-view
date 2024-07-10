@@ -1,0 +1,45 @@
+/*Main Css */
+::selection{background:#ccc;color:#fff;text-shadow:none;}
+::-webkit-scrollbar{width:8px;height: 8px;background-color:#e9e9e9;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment{display:none;}
+::-webkit-scrollbar-track-piece{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0);background-color:transparent;}
+::-webkit-scrollbar-thumb:vertical{border-radius:50px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0);background-color:rgba(167, 167, 167, 0.9)}
+::-webkit-scrollbar-thumb:horizontal{background: #ccc;width: 3px;border-radius: 0px;}
+
+/* Tabbing CSS */
+[class^="box-"]{display:none}
+[class^="box-"].showfirst{display:block}
+html {
+    font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+body{font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;overflow-x:hidden;font-size:16px;line-height:1;color:#000000;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{display:block;font-weight:normal;}
+*:hover,
+*:focus,
+*{outline:none!important;}
+img{max-width:100%;height:auto;}
+a,
+input[type="submit"]{text-decoration: none;-webkit-transition:all 0.4s ease-In-out;-moz-transition:all 0.4s ease-In-out;-o-transition:all 0.4s ease-In-out;transition:all 0.4s ease-In-out;display:inline-block;cursor:pointer;}
+a:hover{color:#e00000;}
+p,
+a{font-size:16px;font-weight:normal;color:#000000;}
+p{line-height:26px;display:block;}
+span{display:inline-block;}
+
+textarea, 
+select,
+input[type],
+textarea,
+select,
+button{background:transparent;border:none;border-radius:0px;font-family: "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", sans-serif;font-weight:400;}
+::-webkit-input-placeholder{color:#999999;font-weight:400;}
+::-moz-placeholder{color:#999999;font-weight:400;}
+:-ms-input-placeholder{color:#999999;font-weight:400;}
+:-moz-placeholder{color:#999999;font-weight:400;}
+
